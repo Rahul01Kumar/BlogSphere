@@ -1,688 +1,487 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Completed - BlogSphere | Home</title>
+    <title>BlogSphere | Home</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Swiper.js styles -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <!-- Custom styles -->
     <link rel="stylesheet" href="./assets/css/main.css">
+    <style>
+        /* Additional styles for the new header and footer */
+        .main-content {
+            margin-top: 80px; /* Space for fixed header */
+            min-height: calc(100vh - 80px - 400px); /* Viewport height - header height - footer height */
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-
-        <nav class="navbar container">
-            <a href="./index.html">
-                <h2 class="logo">BlogSphere</h2>
-            </a>
-
-            <div class="menu" id="menu">
-                <ul class="list">
-                    <li class="list-item">
-                        <a href="#" class="list-link current">Home</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="category.html" class="list-link">Categories</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="review.html" class="list-link">Reviews</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="news.html" class="list-link">News</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="member.html" class="list-link">Membership</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="contact.html" class="list-link">Contact</a>
-                    </li>
-                    <li class="list-item screen-lg-hidden">
-                        <a href="sign.html" class="list-link">Sign in</a>
-                    </li>
-                    <li class="list-item screen-lg-hidden">
-                        <a href="sign.html" class="list-link">Sign up</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="list list-right">
-                <button class="btn place-items-center" id="theme-toggle-btn">
-                    <i class="ri-sun-line sun-icon"></i>
-                    <i class="ri-moon-line moon-icon"></i>
-                </button>
-
-                <button class="btn place-items-center" id="search-icon">
-                    <i class="ri-search-line"></i>
-                </button>
-
-                <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
-                    <i class="ri-menu-3-line open-menu-icon"></i>
-                    <i class="ri-close-line close-menu-icon"></i>
-                </button>
-
-                <a href="sign.html" class="list-link screen-sm-hidden">Sign in</a>
-                <a href="sign.html" class="btn sign-up-btn fancy-border screen-sm-hidden">
-                    <span>Sign up</span>
-                </a>
-            </div>
-
-        </nav>
-
-    </header>
-
-    <!-- Search -->
-    <div class="search-form-container container" id="search-form-container">
-
-        <div class="form-container-inner">
-
-            <form action="" class="form">
-                <input class="form-input" type="text" placeholder="What are you looking for?">
-                <button class="btn form-btn" type="submit">
-                    <i class="ri-search-line"></i>
-                </button>
-            </form>
-            <span class="form-note">Or press ESC to close.</span>
-
-        </div>
-
-        <button class="btn form-close-btn place-items-center" id="form-close-btn">
-            <i class="ri-close-line"></i>
-        </button>
-
-    </div>
-
-    <!-- Featured articles -->
-    <section class="featured-articles section section-header-offset">
-
-        <div class="featured-articles-container container d-grid">
-
-            <div class="featured-content d-grid">
-
-                <div class="headline-banner">
-                    <h3 class="headline fancy-border">
-                        <span class="place-items-center">Breaking news</span>
-                    </h3>
-                    <span class="headline-description">Apple announces a new partnership...</span>
-                </div>
-
-                <a href="./post.html" class="article featured-article featured-article-1">
-                    <img src="./assets/images/featured/featured-1.jpg" alt="" class="article-image">
-                    <span class="article-category">Technology</span>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>Dec 5th 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>8 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Is VR the future?</h3>
-
-                    </div>
-                </a>
-
-                <a href="rest.html" class="article featured-article featured-article-2">
-                    <img src="./assets/images/featured/featured-2.jpg" alt="" class="article-image">
-                    <span class="article-category">Food</span>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>Dec 6th 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>4 Min read</span>
-                        </div>
-
-                        <h3  class="title article-title">Fine dining 101</h3>
-
-                    </div>
-                </a>
-
-                <a href="./post.html" class="article featured-article featured-article-3">
-                    <img src="./assets/images/featured/featured-3.jpg" alt="" class="article-image">
-                    <span class="article-category">Health</span>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>Dec 5th 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>5 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Natural fat burner</h3>  
-
-                    </div>
-                </a>
-
-            </div>
-            
-            <div class="sidebar d-grid">
-
-                <h3 class="title featured-content-title">Trending news</h3>
-
-                <a href="#" class="trending-news-box">
-                    <div class="trending-news-img-box">
-                        <span class="trending-number place-items-center">01</span>
-                        <img src="./assets/images/trending/trending_1.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="trending-news-data">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Cryptocurrency Regulation</h3>
-
-                    </div>
-                </a>
-
-                <a href="#" class="trending-news-box">
-                    <div class="trending-news-img-box">
-                        <span class="trending-number place-items-center">02</span>
-                        <img src="./assets/images/trending/trending_2.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="trending-news-data">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Climate Change Initiatives</h3>
-
-                    </div>
-                </a>
-
-                <a href="#" class="trending-news-box">
-                    <div class="trending-news-img-box">
-                        <span class="trending-number place-items-center">03</span>
-                        <img src="./assets/images/trending/trending_3.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="trending-news-data">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Artificial Intelligence Advancements</h3>
-
-                    </div>
-                </a>
-
-                <a href="#" class="trending-news-box">
-                    <div class="trending-news-img-box">
-                        <span class="trending-number place-items-center">04</span>
-                        <img src="./assets/images/trending/trending_4.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="trending-news-data">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Ecotourism and Adventure Travel</h3>
-
-                    </div>
-                </a>
-
-                <a href="#" class="trending-news-box">
-                    <div class="trending-news-img-box">
-                        <span class="trending-number place-items-center">05</span>
-                        <img src="./assets/images/trending/trending_5.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="trending-news-data">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Healthcare Innovations</h3>
-
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Quick read -->
-    <section class="quick-read section">
-
-        <div class="container">
-
-            <h2 class="title section-title" data-name="Quick read">Quick read</h2>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <a href="#" class="article swiper-slide">
-                        <img src="./assets/images/quick_read/quick_read_1.jpg" alt="" class="article-image">
-
-                        <div class="article-data-container">
-                            <div class="article-data">
-                                <span>23 Dec 2021</span>
-                                <span class="article-data-spacer"></span>
-                                <span>3 Min read</span>
-                            </div>
-                            <h3 class="title article-title">fashion world</h3>
-                        </div>
-                    </a>
-                    <!-- Slides -->
-                    <a href="#" class="article swiper-slide">
-                        <img src="./assets/images/quick_read/quick_read_2.jpg" alt="" class="article-image">
-
-                        <div class="article-data-container">
-                            <div class="article-data">
-                                <span>23 Dec 2021</span>
-                                <span class="article-data-spacer"></span>
-                                <span>3 Min read</span>
-                            </div>
-                            <h3 class="title article-title">Nightlife</h3>
-                        </div>
-                    </a>
-                    <!-- Slides -->
-                    <a href="#" class="article swiper-slide">
-                        <img src="./assets/images/quick_read/quick_read_3.jpg" alt="" class="article-image">
-
-                        <div class="article-data-container">
-                            <div class="article-data">
-                                <span>23 Dec 2021</span>
-                                <span class="article-data-spacer"></span>
-                                <span>3 Min read</span>
-                            </div>
-                            <h3 class="title article-title">Cars</h3>
-                        </div>
-                    </a>
-                    <!-- Slides -->
-                    <a href="#" class="article swiper-slide">
-                        <img src="./assets/images/quick_read/quick_read_4.jpg" alt="" class="article-image">
-
-                        <div class="article-data-container">
-                            <div class="article-data">
-                                <span>23 Dec 2023</span>
-                                <span class="article-data-spacer"></span>
-                                <span>3 Min read</span>
-                            </div>
-                            <h3 class="title article-title">A.I.</h3>
-                        </div>
-                    </a>
-                    <!-- Slides -->
-                    <a href="#" class="article swiper-slide">
-                        <img src="./assets/images/quick_read/quick_read_5.jpg" alt="" class="article-image">
-
-                        <div class="article-data-container">
-                            <div class="article-data">
-                                <span>23 Dec 2023</span>
-                                <span class="article-data-spacer"></span>
-                                <span>3 Min read</span>
-                            </div>
-                            <h3 class="title article-title">Vaping</h3>
-                        </div>
-                    </a>
-                    <!-- Slides -->
-                    <a href="#" class="article swiper-slide">
-                        <img src="./assets/images/quick_read/quick_read_6.jpg" alt="" class="article-image">
-
-                        <div class="article-data-container">
-                            <div class="article-data">
-                                <span>23 Dec 2021</span>
-                                <span class="article-data-spacer"></span>
-                                <span>3 Min read</span>
-                            </div>
-                            <h3 class="title article-title">Marriages</h3>
-                        </div>
-                    </a>
-                </div>
-                <!-- Navigation buttons -->
-                <div class="swiper-button-prev swiper-controls"></div>
-                <div class="swiper-button-next swiper-controls"></div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Older posts -->
-    <section class="older-posts section">
-
-        <div class="container">
-
-            <h2 class="title section-title" data-name="Older posts">Older posts</h2>
-
-            <div class="older-posts-grid-wrapper d-grid">
-
-                <a href="#" class="article d-grid">
-                    <div class="older-posts-article-image-wrapper">
-                        <img src="./assets/images/older_posts/older_posts_1.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>20-3-2024</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Nature</h3>
-                        <p class="article-description">Nature is the canvas upon which life paints its most vivid hues. From the whispering leaves in a forest to the majestic peaks of mountains reaching towards the sky, nature encapsulates both serenity and awe-inspiring power. It's a symphony of elements, from the gentle flow of rivers to the fierce roar of waterfalls, each melody contributing to the grand composition of the natural world. In its simplicity lies complexity, in its chaos lies harmony. Nature is a reminder of our interconnectedness with the world around us, urging us to cherish and protect its boundless beauty for generations to come.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="older-posts-article-image-wrapper">
-                        <img src="./assets/images/older_posts/older_posts_2.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-                        
-                        <h3 class="title article-title">Mountain Hiking</h3>
-                        <p class="article-description">Mountain hiking is an exhilarating dance with nature's grandeur. With every step, one ascends into a realm where the air feels purer and the views more expansive. The trail becomes a guide through rugged terrain, leading hikers to hidden vistas and breathtaking panoramas. Each ascent is a test of physical endurance and mental fortitude, but the rewards are abundant – the sense of accomplishment at the summit, the camaraderie forged along the way, and the profound connection with the wilderness. In the heart of the mountains, amidst towering peaks and vast valleys, hikers find solace, inspiration, and a profound appreciation for the wonders of the natural world.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="older-posts-article-image-wrapper">
-                        <img src="./assets/images/older_posts/older_posts_3.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Technology</h3>
-                        <p class="article-description">Technology is the ever-evolving toolset that empowers humanity to push the boundaries of innovation and progress. From the simplest of machines to the most advanced artificial intelligence, technology permeates every aspect of modern life, shaping how we communicate, work, and interact with the world around us. It serves as a catalyst for change, revolutionizing industries, enhancing efficiency, and opening new frontiers of possibility. Yet, with its boundless potential comes responsibility – to wield technology ethically, to mitigate its unintended consequences, and to ensure its benefits are accessible to all. In the tapestry of human history, technology stands as a testament to our ingenuity and a beacon guiding us towards a future limited only by our imagination.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="older-posts-article-image-wrapper">
-                        <img src="./assets/images/older_posts/older_posts_4.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Real Estate</h3>
-                        <p class="article-description">Real estate encompasses the tangible and intangible assets tied to land and property, embodying the essence of location, value, and opportunity. From sprawling suburban homes to bustling urban developments, real estate serves as the foundation for communities, commerce, and investment. It reflects the dynamic interplay between supply and demand, market trends, and societal needs, shaping landscapes and livelihoods alike. Whether buying, selling, or investing, navigating the intricacies of real estate requires foresight, strategy, and a keen understanding of both local and global forces. In its essence, real estate represents not just physical structures, but also dreams, aspirations, and the pursuit of a place to call home.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="older-posts-article-image-wrapper">
-                        <img src="./assets/images/older_posts/older_posts_5.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Restaurents</h3>
-                        <p class="article-description">Restaurants are the vibrant heartbeats of culinary culture, offering a kaleidoscope of flavors, atmospheres, and experiences to tantalize the senses. From cozy neighborhood bistros to world-renowned fine dining establishments, restaurants serve as communal hubs where food becomes an art form and dining transforms into an occasion. Each restaurant tells a story through its menu, décor, and ambiance, inviting patrons on a gastronomic journey infused with creativity and passion. Whether savoring familiar comfort foods or embarking on culinary adventures with exotic cuisines, the allure of restaurants lies in their ability to nourish not only the body but also the soul, fostering connection, celebration, and the joy of shared meals.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="older-posts-article-image-wrapper">
-                        <img src="./assets/images/older_posts/older_posts_6.jpg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dec 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Mother Nature</h3>
-                        <p class="article-description">"Mother Nature" is the personification of the natural world, embodying its nurturing, regenerative, and sometimes unpredictable qualities. She is both gentle and fierce, providing sustenance, beauty, and inspiration while also reminding us of the power and resilience inherent in the Earth's ecosystems. From the delicate petals of a flower to the raging fury of a storm, Mother Nature encapsulates the cyclical rhythms of life and the interconnectedness of all living beings. Revered across cultures and generations, she serves as a timeless reminder of our responsibility to steward and protect the precious resources of our planet for future generations.</p>
-
-                    </div>
-                </a>
-
-            </div>
-
-            <div class="see-more-container">
-                <a href="#" class="btn see-more-btn place-items-center">See more <i class="ri-arrow-right-s-line"></i></i></a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Popular tags -->
-    <section class="popular-tags section">
-
-        <div class="container">
-
-            <h2 class="title section-title" data-name="Popular tags">Popular tags</h2>
-
-            <div class="popular-tags-container d-grid">
-
-                <a href="travel.html" class="article">
-                    <span class="tag-name">#Travel</span>
-                    <img src="./assets/images/tags/travel-tag.jpg" alt="" class="article-image">
-                </a>
-
-                <a href="food.html" class="article">
-                    <span class="tag-name">#Food</span>
-                    <img src="./assets/images/tags/food-tag.jpg" alt="" class="article-image">
-                </a>
-
-                <a href="tech.html" class="article">
-                    <span class="tag-name">#Technology</span>
-                    <img src="./assets/images/tags/technology-tag.jpg" alt="" class="article-image">
-                </a>
-
-                <a href="health.html" class="article">
-                    <span class="tag-name">#Health</span>
-                    <img src="./assets/images/tags/health-tag.jpg" alt="" class="article-image">
-                </a>
-
-                <a href="nature.html" class="article">
-                    <span class="tag-name">#Nature</span>
-                    <img src="./assets/images/tags/nature-tag.jpg" alt="" class="article-image">
-                </a>
-
-                <a href="fitness.html" class="article">
-                    <span class="tag-name">#Fitness</span>
-                    <img src="./assets/images/tags/fitness-tag.jpg" alt="" class="article-image">
-                </a>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter section">
-
-        <div class="container">
-
-            <h2 class="title section-title" data-name="Newsletter">Newsletter</h2>
-
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <!-- Search -->
+        <div class="search-form-container container" id="search-form-container">
             <div class="form-container-inner">
-                <h6 class="title newsletter-title">Subscribe to BlogSphere</h6>
-                <p class="newsletter-description">Subscibe to our channel for the latest news and updates.</p>
-
                 <form action="" class="form">
-                    <input class="form-input" type="text" placeholder="Enter your email address">
+                    <input class="form-input" type="text" placeholder="What are you looking for?">
                     <button class="btn form-btn" type="submit">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="ri-search-line"></i>
                     </button>
                 </form>
-
+                <span class="form-note">Or press ESC to close.</span>
             </div>
-
+            <button class="btn form-close-btn place-items-center" id="form-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
         </div>
 
-    </section>
+        <!-- Featured articles -->
+        <section class="featured-articles section section-header-offset">
+            <div class="featured-articles-container container d-grid">
+                <div class="featured-content d-grid">
+                    <div class="headline-banner">
+                        <h3 class="headline fancy-border">
+                            <span class="place-items-center">Breaking news</span>
+                        </h3>
+                        <span class="headline-description">Apple announces a new partnership...</span>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="footer section">
+                    <a href="./post.html" class="article featured-article featured-article-1">
+                        <img src="./assets/images/featured/featured-1.jpg" alt="" class="article-image">
+                        <span class="article-category">Technology</span>
 
-        <div class="footer-container container d-grid">
-            
-            <div class="company-data">
-                <a href="./index.html">
-                    <h2 class="logo">BlogSphere</h2>
-                </a>
-                <p class="company-description">
-   
-                    <br>
-                    <!-- more about the subsription   -->
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Dec 5th 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>8 Min read</span>
+                            </div>
 
-                    </p>
+                            <h3 class="title article-title">Is VR the future?</h3>
+                        </div>
+                    </a>
+
+                    <a href="rest.html" class="article featured-article featured-article-2">
+                        <img src="./assets/images/featured/featured-2.jpg" alt="" class="article-image">
+                        <span class="article-category">Food</span>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Dec 6th 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>4 Min read</span>
+                            </div>
+
+                            <h3  class="title article-title">Fine dining 101</h3>
+                        </div>
+                    </a>
+
+                    <a href="./post.html" class="article featured-article featured-article-3">
+                        <img src="./assets/images/featured/featured-3.jpg" alt="" class="article-image">
+                        <span class="article-category">Health</span>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Dec 5th 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>5 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Natural fat burner</h3>  
+                        </div>
+                    </a>
+                </div>
                 
-                <ul class="list social-media">
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-pinterest-line"></i></a>
-                    </li>
-                </ul>
+                <div class="sidebar d-grid">
+                    <h3 class="title featured-content-title">Trending news</h3>
 
-                <span class="copyright-notice">&copy;2024 BlogSphere. All rights reserved.</span>
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-img-box">
+                            <span class="trending-number place-items-center">01</span>
+                            <img src="./assets/images/trending/trending_1.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Cryptocurrency Regulation</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-img-box">
+                            <span class="trending-number place-items-center">02</span>
+                            <img src="./assets/images/trending/trending_2.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Climate Change Initiatives</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-img-box">
+                            <span class="trending-number place-items-center">03</span>
+                            <img src="./assets/images/trending/trending_3.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Artificial Intelligence Advancements</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-img-box">
+                            <span class="trending-number place-items-center">04</span>
+                            <img src="./assets/images/trending/trending_4.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Ecotourism and Adventure Travel</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-img-box">
+                            <span class="trending-number place-items-center">05</span>
+                            <img src="./assets/images/trending/trending_5.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Healthcare Innovations</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <h6 class="title footer-title">Categories</h6>
-                
-                <ul class="footer-list list">
-                    <li class="list-item">
-                        <a href="travel.html" class="list-link">Travel</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="food.html" class="list-link">Food</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="tech.html" class="list-link">Technology</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="health.html" class="list-link">Health</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="nature.html" class="list-link">Nature</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="fitness.html" class="list-link">Fitness</a>
-                    </li>
-                </ul>
+        <!-- Quick read -->
+        <section class="quick-read section">
+            <div class="container">
+                <h2 class="title section-title" data-name="Quick read">Quick read</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <a href="#" class="article swiper-slide">
+                            <img src="./assets/images/quick_read/quick_read_1.jpg" alt="" class="article-image">
 
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2021</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">fashion world</h3>
+                            </div>
+                        </a>
+                        <!-- Slides -->
+                        <a href="#" class="article swiper-slide">
+                            <img src="./assets/images/quick_read/quick_read_2.jpg" alt="" class="article-image">
+
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2021</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">Nightlife</h3>
+                            </div>
+                        </a>
+                        <!-- Slides -->
+                        <a href="#" class="article swiper-slide">
+                            <img src="./assets/images/quick_read/quick_read_3.jpg" alt="" class="article-image">
+
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2021</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">Cars</h3>
+                            </div>
+                        </a>
+                        <!-- Slides -->
+                        <a href="#" class="article swiper-slide">
+                            <img src="./assets/images/quick_read/quick_read_4.jpg" alt="" class="article-image">
+
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2023</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">A.I.</h3>
+                            </div>
+                        </a>
+                        <!-- Slides -->
+                        <a href="#" class="article swiper-slide">
+                            <img src="./assets/images/quick_read/quick_read_5.jpg" alt="" class="article-image">
+
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2023</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">Vaping</h3>
+                            </div>
+                        </a>
+                        <!-- Slides -->
+                        <a href="#" class="article swiper-slide">
+                            <img src="./assets/images/quick_read/quick_read_6.jpg" alt="" class="article-image">
+
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2021</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">Marriages</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev swiper-controls"></div>
+                    <div class="swiper-button-next swiper-controls"></div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <h6 class="title footer-title">Useful links</h6>
-                
-                <ul class="footer-list list">
-                    <li class="list-item">
-                        <a href="index.html" class="list-link">Home</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="category.html" class="list-link">Elements</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="category.html" class="list-link">Tags</a>
-                    </li>
-                    <!-- <li class="list-item">
-                        <a href="author.html" class="list-link">Authors</a>
-                    </li> -->
-                    <li class="list-item">
-                        <a href="member.html" class="list-link">Membership</a>
-                    </li>
-                </ul>
+        <!-- Older posts -->
+        <section class="older-posts section">
+            <div class="container">
+                <h2 class="title section-title" data-name="Older posts">Older posts</h2>
 
+                <div class="older-posts-grid-wrapper d-grid">
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="./assets/images/older_posts/older_posts_1.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>20-3-2024</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Nature</h3>
+                            <p class="article-description">Nature is the canvas upon which life paints its most vivid hues. From the whispering leaves in a forest to the majestic peaks of mountains reaching towards the sky, nature encapsulates both serenity and awe-inspiring power. It's a symphony of elements, from the gentle flow of rivers to the fierce roar of waterfalls, each melody contributing to the grand composition of the natural world. In its simplicity lies complexity, in its chaos lies harmony. Nature is a reminder of our interconnectedness with the world around us, urging us to cherish and protect its boundless beauty for generations to come.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="./assets/images/older_posts/older_posts_2.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            
+                            <h3 class="title article-title">Mountain Hiking</h3>
+                            <p class="article-description">Mountain hiking is an exhilarating dance with nature's grandeur. With every step, one ascends into a realm where the air feels purer and the views more expansive. The trail becomes a guide through rugged terrain, leading hikers to hidden vistas and breathtaking panoramas. Each ascent is a test of physical endurance and mental fortitude, but the rewards are abundant – the sense of accomplishment at the summit, the camaraderie forged along the way, and the profound connection with the wilderness. In the heart of the mountains, amidst towering peaks and vast valleys, hikers find solace, inspiration, and a profound appreciation for the wonders of the natural world.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="./assets/images/older_posts/older_posts_3.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Technology</h3>
+                            <p class="article-description">Technology is the ever-evolving toolset that empowers humanity to push the boundaries of innovation and progress. From the simplest of machines to the most advanced artificial intelligence, technology permeates every aspect of modern life, shaping how we communicate, work, and interact with the world around us. It serves as a catalyst for change, revolutionizing industries, enhancing efficiency, and opening new frontiers of possibility. Yet, with its boundless potential comes responsibility – to wield technology ethically, to mitigate its unintended consequences, and to ensure its benefits are accessible to all. In the tapestry of human history, technology stands as a testament to our ingenuity and a beacon guiding us towards a future limited only by our imagination.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="./assets/images/older_posts/older_posts_4.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Real Estate</h3>
+                            <p class="article-description">Real estate encompasses the tangible and intangible assets tied to land and property, embodying the essence of location, value, and opportunity. From sprawling suburban homes to bustling urban developments, real estate serves as the foundation for communities, commerce, and investment. It reflects the dynamic interplay between supply and demand, market trends, and societal needs, shaping landscapes and livelihoods alike. Whether buying, selling, or investing, navigating the intricacies of real estate requires foresight, strategy, and a keen understanding of both local and global forces. In its essence, real estate represents not just physical structures, but also dreams, aspirations, and the pursuit of a place to call home.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="./assets/images/older_posts/older_posts_5.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Restaurents</h3>
+                            <p class="article-description">Restaurants are the vibrant heartbeats of culinary culture, offering a kaleidoscope of flavors, atmospheres, and experiences to tantalize the senses. From cozy neighborhood bistros to world-renowned fine dining establishments, restaurants serve as communal hubs where food becomes an art form and dining transforms into an occasion. Each restaurant tells a story through its menu, décor, and ambiance, inviting patrons on a gastronomic journey infused with creativity and passion. Whether savoring familiar comfort foods or embarking on culinary adventures with exotic cuisines, the allure of restaurants lies in their ability to nourish not only the body but also the soul, fostering connection, celebration, and the joy of shared meals.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <img src="./assets/images/older_posts/older_posts_6.jpg" alt="" class="article-image">
+                        </div>
+
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+
+                            <h3 class="title article-title">Mother Nature</h3>
+                            <p class="article-description">"Mother Nature" is the personification of the natural world, embodying its nurturing, regenerative, and sometimes unpredictable qualities. She is both gentle and fierce, providing sustenance, beauty, and inspiration while also reminding us of the power and resilience inherent in the Earth's ecosystems. From the delicate petals of a flower to the raging fury of a storm, Mother Nature encapsulates the cyclical rhythms of life and the interconnectedness of all living beings. Revered across cultures and generations, she serves as a timeless reminder of our responsibility to steward and protect the precious resources of our planet for future generations.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="see-more-container">
+                    <a href="#" class="btn see-more-btn place-items-center">See more <i class="ri-arrow-right-s-line"></i></i></a>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <h6 class="title footer-title">Company</h6>
-                
-                <ul class="footer-list list">
-                    <li class="list-item">
-                        <a href="contact.html" class="list-link">Contact us</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">F.A.Q</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Careers</a>
-                    </li>
-                    <!-- <li class="list-item">
-                        <a href="#" class="list-link">Authors</a>
-                    </li> -->
-                    <li class="list-item">
-                        <a href="member.html" class="list-link">Memberships</a>
-                    </li>
-                </ul>
+        <!-- Popular tags -->
+        <section class="popular-tags section">
+            <div class="container">
+                <h2 class="title section-title" data-name="Popular tags">Popular tags</h2>
 
+                <div class="popular-tags-container d-grid">
+                    <a href="travel.html" class="article">
+                        <span class="tag-name">#Travel</span>
+                        <img src="./assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+                    </a>
+
+                    <a href="food.html" class="article">
+                        <span class="tag-name">#Food</span>
+                        <img src="./assets/images/tags/food-tag.jpg" alt="" class="article-image">
+                    </a>
+
+                    <a href="tech.html" class="article">
+                        <span class="tag-name">#Technology</span>
+                        <img src="./assets/images/tags/technology-tag.jpg" alt="" class="article-image">
+                    </a>
+
+                    <a href="health.html" class="article">
+                        <span class="tag-name">#Health</span>
+                        <img src="./assets/images/tags/health-tag.jpg" alt="" class="article-image">
+                    </a>
+
+                    <a href="nature.html" class="article">
+                        <span class="tag-name">#Nature</span>
+                        <img src="./assets/images/tags/nature-tag.jpg" alt="" class="article-image">
+                    </a>
+
+                    <a href="fitness.html" class="article">
+                        <span class="tag-name">#Fitness</span>
+                        <img src="./assets/images/tags/fitness-tag.jpg" alt="" class="article-image">
+                    </a>
+                </div>
             </div>
+        </section>
 
-        </div>
-        
-    </footer>
+        <!-- Newsletter -->
+        <section class="newsletter section">
+            <div class="container">
+                <h2 class="title section-title" data-name="Newsletter">Newsletter</h2>
+
+                <div class="form-container-inner">
+                    <h6 class="title newsletter-title">Subscribe to BlogSphere</h6>
+                    <p class="newsletter-description">Subscibe to our channel for the latest news and updates.</p>
+
+                    <form action="" class="form">
+                        <input class="form-input" type="text" placeholder="Enter your email address">
+                        <button class="btn form-btn" type="submit">
+                            <i class="ri-mail-send-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- Swiper.js -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <!-- Custom script -->
     <script src="./assets/js/main.js"></script>
+    <script>
+        // Load header and footer
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
