@@ -17,8 +17,8 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Serve static files from the parent directory (where your HTML files are)
-app.use(express.static(path.join(__dirname, '..')));
+// Serve static files from the Frontend folder
+app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 
 // Simple session configuration
 app.use(session({
@@ -35,7 +35,7 @@ app.use('/api/auth', authRoutes);
 
 // Root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'Frontend', 'index.html'));
 });
 
 // Connect to MongoDB
