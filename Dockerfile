@@ -38,4 +38,5 @@ COPY ./Frontend/ ./Frontend/
 EXPOSE 3001
 
 # Command to start the backend application (adjust as needed)
-CMD ["npm", "run", "dev", "--prefix", "./backend"]
+# CMD ["node", "run", "dev", "--prefix", "./backend"]
+CMD ["node","server.js"]
