@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSphere | Home</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper.js styles -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Base styles that will work even if CSS fails to load */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .main-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px - 400px);
+            padding: 20px;
+        }
+        
+        /* Image fallbacks */
+        .article-image {
+            background-color: #f0f0f0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            width: 100%;
+        }
+        
+        /* Temporary header/footer styles */
+        .temp-nav {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .temp-footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* Basic grid fallback */
+        .d-grid {
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .d-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+        }
+        
+        /* Article card styling */
+        .article {
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 2rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .article:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-data {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-title {
+            margin: 0;
+            color: #333;
+        }
+        
+        /* Section styling */
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #333;
+        }
+        
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder with Fallback -->
+    <div id="header-placeholder">
+        <nav class="temp-nav">
+            <h1>BlogSphere</h1>
+            <div class="search-icon">
+                <i class="ri-search-line"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#" style="color: white; margin-left: 1rem;">Home</a>
+                <a href="#" style="color: white; margin-left: 1rem;">Categories</a>
+                <a href="#" style="color: white; margin-left: 1rem;">About</a>
+                <a href="#" style="color: white; margin-left: 1rem;">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <!-- Search Form -->
+        <div class="search-form-container container" id="search-form-container" style="display: none;">
+            <div class="form-container-inner">
+                <form action="" class="form">
+                    <input class="form-input" type="text" placeholder="What are you looking for?">
+                    <button class="btn form-btn" type="submit">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+                <span class="form-note">Or press ESC to close.</span>
+            </div>
+            <button class="btn form-close-btn" id="form-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <!-- Featured Articles -->
+        <section class="featured-articles section section-header-offset">
+            <div class="featured-articles-container container d-grid">
+                <div class="featured-content d-grid">
+                    <div class="headline-banner">
+                        <h3 class="headline fancy-border">
+                            <span>Breaking news</span>
+                        </h3>
+                        <span class="headline-description">Apple announces a new partnership...</span>
+                    </div>
+
+                    <a href="post.html" class="article featured-article featured-article-1">
+                        <div class="article-image">Featured Image 1</div>
+                        <span class="article-category">Technology</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Dec 5th 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>8 Min read</span>
+                            </div>
+                            <h3 class="title article-title">Is VR the future?</h3>
+                        </div>
+                    </a>
+
+                    <a href="rest.html" class="article featured-article featured-article-2">
+                        <div class="article-image">Featured Image 2</div>
+                        <span class="article-category">Food</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Dec 6th 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>4 Min read</span>
+                            </div>
+                            <h3 class="title article-title">Fine dining 101</h3>
+                        </div>
+                    </a>
+
+                    <a href="post.html" class="article featured-article featured-article-3">
+                        <div class="article-image">Featured Image 3</div>
+                        <span class="article-category">Health</span>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>Dec 5th 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>5 Min read</span>
+                            </div>
+                            <h3 class="title article-title">Natural fat burner</h3>  
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="sidebar d-grid">
+                    <h3 class="title featured-content-title">Trending news</h3>
+
+                    <a href="#" class="trending-news-box">
+                        <div class="trending-news-img-box">
+                            <span class="trending-number">01</span>
+                            <div class="article-image">Trending 1</div>
+                        </div>
+                        <div class="trending-news-data">
+                            <div class="article-data">
+                                <span>23 Dec 2021</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            <h3 class="title article-title">Cryptocurrency Regulation</h3>
+                        </div>
+                    </a>
+
+                    <!-- More trending news boxes... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Read Section -->
+        <section class="quick-read section">
+            <div class="container">
+                <h2 class="title section-title">Quick read</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="article swiper-slide">
+                            <div class="article-image">Quick Read 1</div>
+                            <div class="article-data-container">
+                                <div class="article-data">
+                                    <span>23 Dec 2021</span>
+                                    <span class="article-data-spacer"></span>
+                                    <span>3 Min read</span>
+                                </div>
+                                <h3 class="title article-title">Fashion world</h3>
+                            </div>
+                        </a>
+                        <!-- More quick read slides... -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Older Posts Section -->
+        <section class="older-posts section">
+            <div class="container">
+                <h2 class="title section-title">Older posts</h2>
+                <div class="older-posts-grid-wrapper d-grid">
+                    <a href="#" class="article d-grid">
+                        <div class="older-posts-article-image-wrapper">
+                            <div class="article-image">Older Post 1</div>
+                        </div>
+                        <div class="article-data-container">
+                            <div class="article-data">
+                                <span>20-3-2024</span>
+                                <span class="article-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            <h3 class="title article-title">Nature</h3>
+                            <p class="article-description">Nature is the canvas upon which life paints its most vivid hues...</p>
+                        </div>
+                    </a>
+                    <!-- More older posts... -->
+                </div>
+                <div class="see-more-container">
+                    <a href="#" class="btn see-more-btn">See more <i class="ri-arrow-right-s-line"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Tags Section -->
+        <section class="popular-tags section">
+            <div class="container">
+                <h2 class="title section-title">Popular tags</h2>
+                <div class="popular-tags-container d-grid">
+                    <a href="travel.html" class="article">
+                        <span class="tag-name">#Travel</span>
+                        <div class="article-image">Travel Tag</div>
+                    </a>
+                    <!-- More tags... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter section">
+            <div class="container">
+                <h2 class="title section-title">Newsletter</h2>
+                <div class="form-container-inner">
+                    <h6 class="title newsletter-title">Subscribe to BlogSphere</h6>
+                    <p class="newsletter-description">Subscribe to our channel for the latest news and updates.</p>
+                    <form action="" class="form">
+                        <input class="form-input" type="text" placeholder="Enter your email address">
+                        <button class="btn form-btn" type="submit">
+                            <i class="ri-mail-send-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder with Fallback -->
+    <div id="footer-placeholder">
+        <div class="temp-footer">
+            <div class="footer-content container">
+                <div class="footer-links d-grid">
+                    <div class="footer-group">
+                        <h4 class="footer-title">Categories</h4>
+                        <a href="#" class="footer-link">Technology</a>
+                        <a href="#" class="footer-link">Food</a>
+                        <a href="#" class="footer-link">Health</a>
+                    </div>
+                    <div class="footer-group">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Contact</a>
+                        <a href="#" class="footer-link">Careers</a>
+                    </div>
+                    <div class="footer-group">
+                        <h4 class="footer-title">Social</h4>
+                        <a href="#" class="footer-link"><i class="ri-facebook-fill"></i> Facebook</a>
+                        <a href="#" class="footer-link"><i class="ri-twitter-fill"></i> Twitter</a>
+                        <a href="#" class="footer-link"><i class="ri-instagram-fill"></i> Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2023 BlogSphere. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic JavaScript functionality -->
+    <script>
+        // Basic functionality that works even if JS files fail to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle search form
+            const searchIcon = document.querySelector('.search-icon');
+            const searchFormContainer = document.getElementById('search-form-container');
+            const formCloseBtn = document.getElementById('form-close-btn');
+            
+            if (searchIcon && searchFormContainer && formCloseBtn) {
+                searchIcon.addEventListener('click', () => {
+                    searchFormContainer.style.display = 'block';
+                });
+                
+                formCloseBtn.addEventListener('click', () => {
+                    searchFormContainer.style.display = 'none';
+                });
+            }
+            
+            // Load header and footer
+            function loadHTML(url, elementId) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading '+url+':', error);
+                    });
+            }
+            
+            loadHTML('header.html', 'header-placeholder');
+            loadHTML('footer.html', 'footer-placeholder');
+            
+            // Simple image fallback
+            document.querySelectorAll('.article-image').forEach(img => {
+                if (img.innerHTML.trim() === '' && img.getAttribute('src')) {
+                    img.innerHTML = 'Image not available';
+                }
+            });
+        });
+        
+        // Fallback for Swiper if not loaded
+        if (typeof Swiper === 'undefined') {
+            console.warn('Swiper not loaded - implementing simple fallback');
+            const swiperEls = document.querySelectorAll('.swiper');
+            swiperEls.forEach(el => {
+                el.style.overflowX = 'auto';
+                el.style.whiteSpace = 'nowrap';
+            });
+        }
+    </script>
+    
+    <!-- Try to load external JS files -->
+    <script src="assets/js/swiper-bundle.min.js" onerror="console.warn('Failed to load Swiper')"></script>
+    <script src="assets/js/main.js" onerror="console.warn('Failed to load main.js')"></script>
+</body>
+</html>
