@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: blogsphere-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGODB_URI='mongodb+srv://yadav28rahul10:kutta12@cluster0.nqioiwi.mongodb.net/BlogDB'
+    restart: unless-stopped
