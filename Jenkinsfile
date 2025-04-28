@@ -9,7 +9,6 @@ pipeline {
         stage('Stop Existing Container') {
             steps {
                 script {
-                    // Gracefully stop and remove old containers
                     sh '''
                         docker-compose down || true
                         docker stop blogsphere-backend || true
@@ -22,12 +21,8 @@ pipeline {
         stage('Build & Deploy') {
             steps {
                 script {
-                    // Build and start using docker-compose
                     sh 'docker-compose up -d --build'
-                    
-                    // Verify container is running
-                    sh 'sleep 10' // Wait for container to start
-                    sh 'docker ps --filter "name=blogsphere-backend" --format "{{.Status}}" | grep -q "Up"'
+                    sh 'sleep 15' // Increased wait time
                 }
             }
         }
@@ -35,8 +30,29 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 script {
-                    // Check if the app is responding
-                    sh 'curl --retry 5 --retry-delay 10 --retry-all-errors http://localhost:3001/health'
+                    // More robust health check
+                    sh '''
+                        container_id=$(docker ps -qf "name=blogsphere-backend")
+                        if [ -z "$container_id" ]; then
+                            echo "Container not running!"
+                            docker logs blogsphere-backend || true
+                            exit 1
+                        fi
+                        
+                        # Check if port is responding
+                        if ! nc -z localhost 3001; then
+                            echo "Port 3001 not responding!"
+                            docker logs blogsphere-backend
+                            exit 1
+                        fi
+                        
+                        # Try hitting the endpoint
+                        if ! curl -sSf --retry 5 --retry-delay 5 http://localhost:3001/health; then
+                            echo "Health check failed!"
+                            docker logs blogsphere-backend
+                            exit 1
+                        fi
+                    '''
                 }
             }
         }
@@ -44,13 +60,16 @@ pipeline {
 
     post {
         always {
-            cleanWs()  // Clean workspace
+            cleanWs()
         }
         success {
             echo '✅ Deployment successful!'
         }
         failure {
             echo '❌ Deployment failed!'
+            script {
+                sh 'docker logs blogsphere-backend || true'
+            }
         }
     }
 }
